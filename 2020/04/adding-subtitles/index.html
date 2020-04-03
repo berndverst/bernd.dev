@@ -303,7 +303,7 @@ ffmpeg -i $INFILE -i $SUBTITLESENG -i $SUBTITLESGER -i $SUBTITLESSPA \
 <p><img src="/img/captions/burnedin-subtitles.jpg" alt="burnedin"></p>
 <p>We will need to render the video again with the subtitles permanently added into the video stream. Note that this will take some time depending on the video duration, quality and the quality of your CPU and GPU.</p>
 <p><strong>Tradeoff:</strong> While hardware accelerated encoding using GPUs is generally significantly faster, software encoding (CPU only) produces smaller files and better quality.</p>
-<p><strong>Tradeoff:</strong> H.264 has the most compatibility. You likely have hardware support for encoding and decoding. H.265/HEVC files are 25-50% more efficient but decoding is much more compute intensive. Only recent GPUs have hardware support for encoding in this format. <strong>Neverthelss, H.265/HEVC is the format of the future.</strong></p>
+<p><strong>Tradeoff:</strong> H.264 has the most compatibility. You likely have hardware support for encoding and decoding. H.265/HEVC files are 25-50% more efficient but decoding is much more compute intensive. Only recent GPUs have hardware support for encoding in this format. <strong>Nevertheless, H.265/HEVC is the format of the future.</strong></p>
 <p>For output in H.264 with hardware encoding on MacOS</p>
 <pre><code class="language-bash"># Replace with your input video and subtitle file
 INFILE=video.mp4
@@ -512,6 +512,17 @@ ffmpeg -i $INFILE -vcodec libx265 -tag:v hvc1 \
     });
 </script>
 
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-96823561-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
   </body>
 </html>
