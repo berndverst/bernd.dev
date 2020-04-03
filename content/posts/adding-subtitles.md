@@ -90,7 +90,7 @@ We will need to render the video again with the subtitles permanently added into
 
 **Tradeoff:** While hardware accelerated encoding using GPUs is generally significantly faster, software encoding (CPU only) produces smaller files and better quality.
 
-**Tradeoff:** H.264 has the most compatibility. You likely have hardware support for encoding and decoding. H.265/HEVC files are 25-50% more efficient but decoding is much more compute intensive. Only recent GPUs have hardware support for encoding in this format. **Neverthelss, H.265/HEVC is the format of the future.**
+**Tradeoff:** H.264 has the most compatibility. You likely have hardware support for encoding and decoding. H.265/HEVC files are 25-50% more efficient but decoding is much more compute intensive. Only recent GPUs have hardware support for encoding in this format. **Nevertheless, H.265/HEVC is the format of the future.**
 
 For output in H.264 with hardware encoding on MacOS
 ```bash
