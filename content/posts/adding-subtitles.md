@@ -14,6 +14,7 @@ categories = [
 ]
 series = ["Content Creation"]
 aliases = ["auto-captioning", "auto-captions", "subtitles", "adding-captions"]
+images = ["/img/captions/multi-lingual-subtitles.jpg"]
 +++
 
 For accessibility reasons all video content you create should be captioned, but adding subtitles can be a daunting task. In this article we cover how to quickly and easily add subtitles to your existing videos without any video editing software.
