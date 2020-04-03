@@ -15,7 +15,7 @@ categories = [
 ]
 series = ["Content Creation"]
 aliases = ["trim-videos", "split-videos", "cut-videos"]
-images = ["/img/trimvideos/mindblown.jpg"]
+images = ["/img/trimvideo/mindblown.jpg"]
 +++
 Is your video too long for upload to Twitter or Instagram? Do you want to export just a specific clip? Using video editors to trim videos requires reencoding the entire video. Instead I will show you how to **instantly** trim your videos and even maintain embedded subtitle tracks.
 <!--more-->
