@@ -108,7 +108,9 @@ params:
         github: https://github.com/berndverst
         # weibo: http://weibo.com/{yourid}
         twitter: https://twitter.com/berndverst
-        # facebook: https://facebook.com/verst
+        linkedin: https://linkedin.com/in/verst
+        facebook: https://facebook.com/verst
+        devto: https://dev.to/berndverst
         rss: /index.xml
       link_tooltip: false # enable the social link tooltip, options: true, false
   # Site
@@ -126,8 +128,8 @@ params:
   # weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin
   share:
     enable: true # 是否启用分享
-    sites: facebook,twitter,linkedin # PC端显示的分享图标
-    mobile_sites: facebook,twitter,linkedin # 移动端显示的分享图标
+    sites: facebook,twitter,linkedin,wechat # PC端显示的分享图标
+    mobile_sites: facebook,twitter,linkedin,wechat # 移动端显示的分享图标
 
   # Comment
   comment:
