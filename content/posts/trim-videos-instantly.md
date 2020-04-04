@@ -36,7 +36,7 @@ On Mac, simply use *Homebrew* with `brew install ffmpeg`
 
 ## Instantly trim videos
 
-The following command reads the source video and copies all streams contained within (video, audio, subtitles) to the output. The various time parameters ensure only a specific part of the original video is written to the output. The video and audio streams and not reencoded. For this reason this operation is near instant. A huge time saving over workflows involving video editors.
+The following command reads the source video and copies all streams contained within (video, audio, subtitles) to the output. The various time parameters ensure only a specific part of the original video is written to the output. **The video and audio streams are not reencoded.** The time required for reencoding would directly depend on the duration of the video, however we are simply copying parts of the video.  For this reason **the following operation is near instant**. A huge time saving over workflows involving video editors.
 
 ```bash
 INFILE="video.mp4"
