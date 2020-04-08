@@ -43,7 +43,7 @@
 <meta itemprop="description" content="My journey from mitigating a security alert to addressing the root cause in several open source projects.">
 <meta itemprop="datePublished" content="2020-04-08T10:06:00-07:00" />
 <meta itemprop="dateModified" content="2020-04-08T10:06:00-07:00" />
-<meta itemprop="wordCount" content="796">
+<meta itemprop="wordCount" content="816">
 <meta itemprop="image" content="https://bernd.dev/img/securityalerts/godeeper.jpg">
 
 
@@ -300,7 +300,7 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/04/from-security-alert-to-bugfix/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 796words</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 816words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 4minutes </span>
       </div>
     </div>
@@ -375,16 +375,16 @@ Resource: /subscriptions/XXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXXX/ resourcegroups/ku
 <li>✅ Anyone finding the Azure Python SDK samples for storage account creation will create secure accounts.</li>
 </ul></p>
 </div>
-<p><strong>What about all the other SDKs besides Python?</strong><br>
-These documentation and samples for these SDKs will also need to be updated.</p>
 <div class="alert-info ">
   <p><strong>Solution</strong>:<br>
 A new version of the Azure Storage Resource Provider API should <strong>default to creating secure storage accounts</strong> if the <code>supportsHttpsTrafficOnly</code> parameter has not been provided.</p>
 </div>
 <p>Anyone who updates the Azure CLI or Storage SDK will <strong>automatically inherit secure defaults</strong>. Those who have been relying on the insecure behavior (this should be few people) will experience a breaking change, but they of course are <strong>not required to upgrade SDKs or API versions</strong> and can certainly <strong>explicitly set the parameter</strong>.</p>
 <div class="alert-success ">
-  <p>I have filed a feature request with the Azure Storage team to make this change. (This request is within a Microsoft-internal issue tracker and unfortunately cannot be followed publicly.)</p>
+  <p>Exact what I suggested here was indeed done since <a href="https://azuresdkdocs.blob.core.windows.net/$web/python/azure-mgmt-storage/8.0.0/azure.mgmt.storage.v2019_04_01.models.html#azure.mgmt.storage.v2019_04_01.models.StorageAccountCreateParameters">API version 2019-04-01</a>. All current SDKs will be using this API version or a newer one which defaults to the secure setting.</p>
 </div>
+<h3 id="so-why-the-kubeflow-fairing-issue-afterall">So why the Kubeflow Fairing issue afterall?</h3>
+<p>Kubeflow Fairing was using the deprecated <code>azure</code> library. Instead <code>azure-mgmt-storage</code> should have been used. <strong>The edits to the Azure Python sample documentation weren&rsquo;t strictly necessary.</strong> But at least I fixed the tests.</p>
 <p><img src="/img/securityalerts/godeeper.jpg" alt="We must go deeper"></p>
     </div>
     <div class="article-footer">
