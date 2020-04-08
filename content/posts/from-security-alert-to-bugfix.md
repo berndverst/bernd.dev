@@ -105,11 +105,6 @@ I made [this pull request](https://github.com/kubeflow/fairing/pull/477) to fix 
 - ✅ Anyone finding the Azure Python SDK samples for storage account creation will create secure accounts.
 {{< /alert >}}
 
-**What about all the other SDKs besides Python?**  
-These documentation and samples for these SDKs will also need to be updated.
-
-
-
 {{< alert info >}}
 **Solution**:  
 A new version of the Azure Storage Resource Provider API should **default to creating secure storage accounts** if the `supportsHttpsTrafficOnly` parameter has not been provided.
@@ -118,7 +113,11 @@ A new version of the Azure Storage Resource Provider API should **default to cre
 Anyone who updates the Azure CLI or Storage SDK will **automatically inherit secure defaults**. Those who have been relying on the insecure behavior (this should be few people) will experience a breaking change, but they of course are **not required to upgrade SDKs or API versions** and can certainly **explicitly set the parameter**.
 
 {{< alert success >}}
-I have filed a feature request with the Azure Storage team to make this change. (This request is within a Microsoft-internal issue tracker and unfortunately cannot be followed publicly.)
+Exact what I suggested here was indeed done since [API version 2019-04-01](https://azuresdkdocs.blob.core.windows.net/$web/python/azure-mgmt-storage/8.0.0/azure.mgmt.storage.v2019_04_01.models.html#azure.mgmt.storage.v2019_04_01.models.StorageAccountCreateParameters). All current SDKs will be using this API version or a newer one which defaults to the secure setting.
 {{< /alert >}}
+
+### So why the Kubeflow Fairing issue afterall?
+
+Kubeflow Fairing was using the deprecated `azure` library. Instead `azure-mgmt-storage` should have been used. **The edits to the Azure Python sample documentation weren't strictly necessary.** But at least I fixed the tests.
 
 ![We must go deeper](/img/securityalerts/godeeper.jpg)
