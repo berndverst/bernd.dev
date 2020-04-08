@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Bernd Verst</title>
+        From Cloud Security Alert to Open Source Bugfix - Bernd Verst
+      </title>
     <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -22,28 +23,36 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <meta name="description" content="Posts from Bernd Verst about technology, gadgets, music production, travel and running." />
+  <meta name="description" content="My journey from mitigating a security alert to addressing the root cause in several open source projects." />
   <meta name="generator" content="Hugo 0.68.3 with theme pure" />
-  <title>Bernd Verst</title>
+  <title>From Cloud Security Alert to Open Source Bugfix - Bernd Verst</title>
   
-  <link rel="alternate" type="application/rss+xml" href="https://bernd.dev/index.xml" title="Bernd Verst" />
   
   <link rel="stylesheet" href="https://bernd.dev/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
   
   <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-  <meta property="og:title" content="Bernd Verst :: Tech Blog :: bernd.dev" />
-<meta property="og:description" content="Posts from Bernd Verst about technology, gadgets, music production, travel and running." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://bernd.dev/" />
-<meta property="og:image" content="https://bernd.dev/avatar.png" />
-<meta property="og:updated_time" content="2020-04-03T15:04:08-07:00" />
-<meta itemprop="name" content="Bernd Verst :: Tech Blog :: bernd.dev">
-<meta itemprop="description" content="Posts from Bernd Verst about technology, gadgets, music production, travel and running."><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://bernd.dev/avatar.png"/>
+  <meta property="og:title" content="From Cloud Security Alert to Open Source Bugfix" />
+<meta property="og:description" content="My journey from mitigating a security alert to addressing the root cause in several open source projects." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bernd.dev/2020/04/from-security-alert-to-bugfix/" />
+<meta property="og:image" content="https://bernd.dev/img/securityalerts/godeeper.jpg" />
+<meta property="article:published_time" content="2020-04-08T10:06:00-07:00" />
+<meta property="article:modified_time" content="2020-04-08T10:06:00-07:00" />
+<meta itemprop="name" content="From Cloud Security Alert to Open Source Bugfix">
+<meta itemprop="description" content="My journey from mitigating a security alert to addressing the root cause in several open source projects.">
+<meta itemprop="datePublished" content="2020-04-08T10:06:00-07:00" />
+<meta itemprop="dateModified" content="2020-04-08T10:06:00-07:00" />
+<meta itemprop="wordCount" content="796">
+<meta itemprop="image" content="https://bernd.dev/img/securityalerts/godeeper.jpg">
 
-<meta name="twitter:title" content="Bernd Verst :: Tech Blog :: bernd.dev"/>
-<meta name="twitter:description" content="Posts from Bernd Verst about technology, gadgets, music production, travel and running."/>
+
+
+<meta itemprop="keywords" content="azure,kubernetes,kubeflow,open source," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://bernd.dev/img/securityalerts/godeeper.jpg"/>
+
+<meta name="twitter:title" content="From Cloud Security Alert to Open Source Bugfix"/>
+<meta name="twitter:description" content="My journey from mitigating a security alert to addressing the root cause in several open source projects."/>
 
   <!--[if lte IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -246,20 +255,20 @@
 
     
     
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
 
-<main class="main" role="main">
-  
-  <div class="content article-list">
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
     
-    
-    
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
+    <div class="article-header">
+      <h1 itemprop="name">
   <a
     class="article-title"
     href="/2020/04/from-security-alert-to-bugfix/"
@@ -267,12 +276,11 @@
   >
 </h1>
 
-      </div>
-      <div class="article-entry text-muted" itemprop="description"><p>Perhaps you&rsquo;ve seen vulnerability reports in your CI/CD pipeline or tools like NPM. Cloud infrastructure has these too and I was surprised to get an alert. Naturally, I had to investigate to see where I went wrong&hellip; (and of course mitigate the problem).</p></div>
-      <p class="article-meta">
+      <div class="article-meta">
+        
 <span class="article-date">
   <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://bernd.dev/2020/04/from-security-alert-to-bugfix/" class="">
+<a href="https://bernd.dev/2020/04/from-security-alert-to-bugfix/" class="article-date">
   <time datetime="2020-04-08 10:06:00 -0700 PDT" itemprop="datePublished">2020-04-08</time>
 </a>
 </span>
@@ -290,101 +298,153 @@
     <a class="article-tag-link" href="/tags/open-source/"> open source </a>
   </span>
 
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2020/04/from-security-alert-to-bugfix/#comments" class="article-comment-link">Comments</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/04/from-security-alert-to-bugfix/#comments"
+            class="article-comment-link">Comments</a></span>
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 796words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 4minutes </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2020/04/trim-videos-instantly/"
-    >Trim Videos Instantly</a
-  >
-</h1>
-
       </div>
-      <div class="article-entry text-muted" itemprop="description"><p>Is your video too long for upload to Twitter or Instagram? Do you want to export just a specific clip? Using video editors to trim videos requires reencoding the entire video. Instead I will show you how to <strong>instantly</strong> trim your videos and even maintain embedded subtitle tracks.</p></div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://bernd.dev/2020/04/trim-videos-instantly/" class="">
-  <time datetime="2020-04-03 15:04:08 -0700 PDT" itemprop="datePublished">2020-04-03</time>
-</a>
-</span>
-<span class="article-category">
-  <i class="icon icon-folder"></i>&nbsp;
-  <a class="article-category-link" href="/categories/accessibility/"> accessibility </a>
-  <a class="article-category-link" href="/categories/productivity/"> productivity </a>
-</span>  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/video/"> video </a>
-    <a class="article-tag-link" href="/tags/ffmpeg/"> ffmpeg </a>
-    <a class="article-tag-link" href="/tags/bash/"> bash </a>
-    <a class="article-tag-link" href="/tags/productivity/"> productivity </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2020/04/trim-videos-instantly/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 332words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2minutes </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2020/04/adding-subtitles/"
-    >Adding subtitles to your videos the easy way</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description"><p>For accessibility reasons all video content you create should be captioned, but adding subtitles can be a daunting task. In this article we cover how to quickly and easily add subtitles to your existing videos without any video editing software.</p></div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://bernd.dev/2020/04/adding-subtitles/" class="">
-  <time datetime="2020-04-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-04-01</time>
-</a>
-</span>
-<span class="article-category">
-  <i class="icon icon-folder"></i>&nbsp;
-  <a class="article-category-link" href="/categories/accessibility/"> accessibility </a>
-</span>  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/video/"> video </a>
-    <a class="article-tag-link" href="/tags/ffmpeg/"> ffmpeg </a>
-    <a class="article-tag-link" href="/tags/bash/"> bash </a>
-    <a class="article-tag-link" href="/tags/accessibility/"> accessibility </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2020/04/adding-subtitles/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 800words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 4minutes </span>
-      </p>
-    </article></div>
-  
-<nav class="bar bar-footer clearfix" data-stick-bottom>
-  <div class="bar-inner">
-    <ul class="pager pull-left">
-    </ul>
-    <div class="total-article bar-right">
-      Page:1/1
     </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <p>Perhaps you&rsquo;ve seen vulnerability reports in your CI/CD pipeline or tools like NPM. Cloud infrastructure has these too and I was surprised to get an alert. Naturally, I had to investigate to see where I went wrong&hellip; (and of course mitigate the problem).</p>
+<h2 id="the-security-alert">The security alert</h2>
+<p>It all started a few weeks ago when I received an email from a colleague with the following content.</p>
+<div class="alert-danger ">
+  <p><p><strong>Secure transfer to storage accounts should be enabled</strong><br>
+Subscription ID: devrel-berndverst-demo-test<br>
+Resource: /subscriptions/XXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXXX/ resourcegroups/kubeflowrelease/providers/ microsoft.storage/storageaccounts/ &gt; fairingXXXXXXXXXXXXXXXXX<br>
+<a href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/5/menuIdToOpen/5/externalSourceName/S360/menuItemBladeParameters/%7B'searchBarFilter'%3A%20'Secure%20transfer%20to%20storage%20accounts%20should%20be%20enabled'%7D?WT.mc_id=bernddev-blog-beverst">1-Click mitigation link</a></p>
+<p><em>Note: several similar results have been omitted</em></p>
+</p>
+</div>
+<p>This was my gut reaction:</p>
+<blockquote>
+<p>😱<em>This <strong>cannot</strong> be. What did I do wrong? Did I mess something up?</em> 😰</p>
+</blockquote>
+<p>My colleague had used <a href="https://docs.microsoft.com/azure/security-center/security-center-intro?WT.mc_id=bernddev-blog-beverst">Azure Security Center</a> to generate a report of security issues. Since I had never received such a message before (note I could have set up <a href="https://docs.microsoft.com/azure/security-center/security-center-provide-security-contact-details?WT.mc_id=bernddev-blog-beverst">email alerts</a> in Azure Security Center myself) I was a bit skeptical and first verified the authenticity of the email: Email domain, Sender Police Framework (SPF) check, Domain Keys Identified Mail (DKIM) all indicated the email was legitimate.</p>
+<p>The <strong>1-Click mitigation</strong> link (which I verified went to the Azure web portal domain) took me directly to the <strong>recommendations</strong> section in the Azure Security Center for my Azure account and jumped to the relevant entries. The <a href="https://docs.microsoft.com/azure/security-center/recommendations-reference?WT.mc_id=bernddev-blog-beverst">Security Center recommendations</a> documentation also had more information on the alert I had received.</p>
+<h2 id="what-i-did-wrong-supposedly">What I did wrong (supposedly)</h2>
+<div class="alert-warning ">
+  <p>Azure Blob Storage accounts should be configured to only serve traffic over <strong>https</strong>.</p>
+</div>
+<p>The 1-step mitigation in Azure Security Center resolved the issue, but I could also have followed <a href="https://docs.microsoft.com/azure/storage/common/storage-require-secure-transfer?WT.mc_id=bernddev-blog-beverst">these instructions</a> in the docs.</p>
+<blockquote>
+<p>🤔 Why would I ever not want secure blob transfers? This does not sound like me.</p>
+</blockquote>
+<h2 id="taking-a-closer-look">Taking a closer look</h2>
+<p>I noticed that all affected blob storage accounts had <strong>programmatically generated names</strong>. Furthermore they all resided in my Azure resource group <code>kubeflowrelease</code> and contained the string <code>fairing</code> in the account names.</p>
+<p>Days earlier I had ported an <a href="https://github.com/kubeflow/examples/tree/master/mnist#azure">end to end tutorial for Kubeflow</a> using the MNIST training set to Azure. Of course in the process I deployed <a href="https://www.kubeflow.org">Kubeflow</a> to my Kubernetes cluster and went through the tutorial I wrote.</p>
+<div class="alert-info ">
+  <p>The Kubeflow project is dedicated to making deployments of machine learning (ML) workflows on Kubernetes simple, portable and scalable.</p>
+</div>
+<h2 id="the-culprit-kubeflow">The culprit: Kubeflow</h2>
+<blockquote>
+<p>💡Kubeflow somehow created the storage accounts in question</p>
+</blockquote>
+<p>The Kubeflow Fairing helper library <a href="https://github.com/kubeflow/fairing/blob/c7faf298221d8f28ae2e4794e85ac3d967c6d1e8/fairing/cloud/azure.py#L74">created the storage account without forcing secure transport</a>.</p>
+<h4 id="how-to-correctly-create-secure-storage-accounts">How to correctly create secure storage accounts</h4>
+<p>Looking at the <a href="https://docs.microsoft.com/azure/storage/common/storage-require-secure-transfer?WT.mc_id=bernddev-blog-beverst">relevant documentation</a> I discovered something very interesting:</p>
+<div class="alert-info ">
+  <p>By default, the Secure transfer required property is enabled when you create a storage account in Azure portal. However, it is disabled when you create a storage account with SDK.</p>
+</div>
+<p><strong>In other words, the SDKs default to doing that for which the Azure Security Center alerted me, creating insecure storage accounts.</strong></p>
+<blockquote>
+<p>❓Kubeflow Fairing is written in Python. I wonder how to create secure storage accounts with the Azure Python SDK.</p>
+</blockquote>
+<p>The Python SDK sample code at <a href="https://github.com/Azure-Samples/storage-python-manage/blob/31c5e908cb5f5dc0393523e83eea3ab2f422d332/README.md">github.com/Azure-Samples/storage-python-manage</a> does not explicitly set the secure option. <strong>The sample code is bad and uses uses the insecure default</strong>. I made <a href="https://github.com/kubeflow/fairing/pull/477">this pull request</a> to fix this.</p>
+<script type="application/javascript" src="https://gist.github.com/berndverst/b1ec0fbb7ab2edbb846cbf43a4338349.js?file=azure-sample-storage-account-create.py"></script>
+
+<p>Fixing the sample code <strong>led to several unrelated issues with the tests</strong>, all of which I fixed:</p>
+<ul>
+<li>The Azure Python SDK version was not locked and the API output had changed, no longer matching the mocked responses</li>
+<li>Travis was running tests for a version of Python that was no longer supported</li>
+<li>Travis was not running tests for current versions of Python 3.7 and 3.8.</li>
+</ul>
+<p>It took me hours, but <a href="https://github.com/Azure-Samples/storage-python-manage/pull/11">Azure-Samples/storage-python-manage#11</a> fixed all of the above.</p>
+<h4 id="what-did-kubeflow-fairing-do">What did Kubeflow Fairing do?</h4>
+<p>Taking a close look we can see that Kubeflow Fairing basically <a href="https://github.com/kubeflow/fairing/blob/c7faf298221d8f28ae2e4794e85ac3d967c6d1e8/fairing/cloud/azure.py#L74">copied from the Azure Python sample code</a>.</p>
+<blockquote>
+<p><em>I would have done the same.</em> Good thing that is fixed now!</p>
+</blockquote>
+<p>I made <a href="https://github.com/kubeflow/fairing/pull/477">this pull request</a> to fix the issue in Kubeflow Fairing.</p>
+<script type="application/javascript" src="https://gist.github.com/berndverst/b1ec0fbb7ab2edbb846cbf43a4338349.js?file=kubeflow-azure-storage-account-creation.py"></script>
+
+<h2 id="success">Success?</h2>
+<div class="alert-success ">
+  <p><ul>
+<li>✅ Kubeflow Fairing now creates secure storage accounts.</li>
+<li>✅ Anyone finding the Azure Python SDK samples for storage account creation will create secure accounts.</li>
+</ul></p>
+</div>
+<p><strong>What about all the other SDKs besides Python?</strong><br>
+These documentation and samples for these SDKs will also need to be updated.</p>
+<div class="alert-info ">
+  <p><strong>Solution</strong>:<br>
+A new version of the Azure Storage Resource Provider API should <strong>default to creating secure storage accounts</strong> if the <code>supportsHttpsTrafficOnly</code> parameter has not been provided.</p>
+</div>
+<p>Anyone who updates the Azure CLI or Storage SDK will <strong>automatically inherit secure defaults</strong>. Those who have been relying on the insecure behavior (this should be few people) will experience a breaking change, but they of course are <strong>not required to upgrade SDKs or API versions</strong> and can certainly <strong>explicitly set the parameter</strong>.</p>
+<div class="alert-success ">
+  <p>I have filed a feature request with the Azure Storage team to make this change. (This request is within a Microsoft-internal issue tracker and unfortunately cannot be followed publicly.)</p>
+</div>
+<p><img src="/img/securityalerts/godeeper.jpg" alt="We must go deeper"></p>
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>Permalink: </strong>
+      <a href="https://bernd.dev/2020/04/from-security-alert-to-bugfix/" title="From Cloud Security Alert to Open Source Bugfix" target="_blank" rel="external">https://bernd.dev/2020/04/from-security-alert-to-bugfix/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="https://creativecommons.org/licenses/by/4.0/deed" target="_blank" rel="external">CC BY 4.0</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/berndverst" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://bernd.dev/bernd.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/berndverst" target="_blank"><span class="text-dark">Bernd Verst</span><small class="ml-1x">Developer Advocate, Microsoft Azure</small></a></h3>
+        <div>Dabbling in Containers, AI, ML, Music and more</div>
+      </div>
+    </figure>
   </div>
+</div>
+
+    </div>
+  </article>
+<section id="comments">
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://bernd.dev/2020/04/trim-videos-instantly/" title="Trim Videos Instantly"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="facebook,twitter,linkedin,wechat"
+                data-mobile-sites="facebook,twitter,linkedin,wechat"></div>
+        </div>
+    </div>
 </nav>
 
 </main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -472,6 +532,7 @@
         hasInnerContainers: true,
     });
 </script>
+
 
 <script type="application/javascript">
 var doNotTrack = false;

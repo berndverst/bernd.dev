@@ -3,6 +3,83 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://bernd.dev/tags/azure/</loc>
+    <lastmod>2020-04-08T10:06:00-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bernd.dev/categories/</loc>
+    <lastmod>2020-04-08T10:06:00-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bernd.dev/categories/cloud-computing/</loc>
+    <lastmod>2020-04-08T10:06:00-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bernd.dev/2020/04/from-security-alert-to-bugfix/</loc>
+    <lastmod>2020-04-08T10:06:00-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bernd.dev/tags/kubeflow/</loc>
+    <lastmod>2020-04-08T10:06:00-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bernd.dev/tags/kubernetes/</loc>
+    <lastmod>2020-04-08T10:06:00-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bernd.dev/tags/open-source/</loc>
+    <lastmod>2020-04-08T10:06:00-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bernd.dev/posts/</loc>
+    <lastmod>2020-04-08T10:06:00-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bernd.dev/categories/security/</loc>
+    <lastmod>2020-04-08T10:06:00-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bernd.dev/tags/</loc>
+    <lastmod>2020-04-08T10:06:00-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bernd.dev/categories/troubleshooting/</loc>
+    <lastmod>2020-04-08T10:06:00-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://bernd.dev/categories/accessibility/</loc>
     <lastmod>2020-04-03T15:04:08-07:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -24,13 +101,6 @@
   </url>
   
   <url>
-    <loc>https://bernd.dev/categories/</loc>
-    <lastmod>2020-04-03T15:04:08-07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bernd.dev/series/content-creation/</loc>
     <lastmod>2020-04-03T15:04:08-07:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -39,13 +109,6 @@
   
   <url>
     <loc>https://bernd.dev/tags/ffmpeg/</loc>
-    <lastmod>2020-04-03T15:04:08-07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bernd.dev/posts/</loc>
     <lastmod>2020-04-03T15:04:08-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -67,13 +130,6 @@
   
   <url>
     <loc>https://bernd.dev/series/</loc>
-    <lastmod>2020-04-03T15:04:08-07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bernd.dev/tags/</loc>
     <lastmod>2020-04-03T15:04:08-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
