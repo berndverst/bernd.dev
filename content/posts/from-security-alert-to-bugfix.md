@@ -78,7 +78,7 @@ By default, the Secure transfer required property is enabled when you create a s
 
 > ❓Kubeflow Fairing is written in Python. I wonder how to create secure storage accounts with the Azure Python SDK.
 
-The Python SDK sample code at [github.com/Azure-Samples/storage-python-manage](https://github.com/Azure-Samples/storage-python-manage/blob/31c5e908cb5f5dc0393523e83eea3ab2f422d332/README.md) does not explicitly set the secure option. **The sample code is bad and uses uses the insecure default**. I made [this pull request](https://github.com/kubeflow/fairing/pull/477) to fix this.
+The Python SDK sample code at [github.com/Azure-Samples/storage-python-manage](https://github.com/Azure-Samples/storage-python-manage/blob/31c5e908cb5f5dc0393523e83eea3ab2f422d332/README.md) does not explicitly set the secure option. **The sample code uses the insecure default** [Edit: *it turns out that this depends on the SDK version used*]. I made [this pull request](https://github.com/kubeflow/fairing/pull/477) to fix this.
 
 {{< gist berndverst b1ec0fbb7ab2edbb846cbf43a4338349 azure-sample-storage-account-create.py >}}
 
@@ -113,11 +113,17 @@ A new version of the Azure Storage Resource Provider API should **default to cre
 Anyone who updates the Azure CLI or Storage SDK will **automatically inherit secure defaults**. Those who have been relying on the insecure behavior (this should be few people) will experience a breaking change, but they of course are **not required to upgrade SDKs or API versions** and can certainly **explicitly set the parameter**.
 
 {{< alert success >}}
-Exact what I suggested here was indeed done since [API version 2019-04-01](https://azuresdkdocs.blob.core.windows.net/$web/python/azure-mgmt-storage/8.0.0/azure.mgmt.storage.v2019_04_01.models.html#azure.mgmt.storage.v2019_04_01.models.StorageAccountCreateParameters). All current SDKs will be using this API version or a newer one which defaults to the secure setting.
+Exactly what I suggested here was indeed done since [API version 2019-04-01](https://azuresdkdocs.blob.core.windows.net/$web/python/azure-mgmt-storage/8.0.0/azure.mgmt.storage.v2019_04_01.models.html#azure.mgmt.storage.v2019_04_01.models.StorageAccountCreateParameters). All current SDKs will be using this API version or a newer one which defaults to the secure setting.
 {{< /alert >}}
 
 ### So why the Kubeflow Fairing issue afterall?
 
-Kubeflow Fairing was using the deprecated `azure` library. Instead `azure-mgmt-storage` should have been used. **The edits to the Azure Python sample documentation weren't strictly necessary.** But at least I fixed the tests.
+Kubeflow Fairing was using the deprecated `azure` library. Instead `azure-mgmt-storage` should have been used.
+
+{{< gist berndverst c67f878414f0357ca133c618cd02d8fb >}}
+
+**The edits to the Azure Python sample documentation weren't strictly necessary.** But at least I fixed the tests.
+
+
 
 ![We must go deeper](/img/securityalerts/godeeper.jpg)
