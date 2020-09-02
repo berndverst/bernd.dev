@@ -1,3 +1,7 @@
 [submodule "themes/hugo-theme-pure"]
 	path = themes/hugo-theme-pure
 	url = git@github.com:xiaoheiAh/hugo-theme-pure.git
+[submodule "public"]
+	path = public
+	url = https://github.com/berndverst/bernd.dev.git
+	branch = gh-pages
